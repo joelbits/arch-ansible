@@ -1,0 +1,4 @@
+---
+dotfiles_repo: "https://github.com/joelbits/dotfiles"
+dotfiles_install_cmd: "stow -S bash"
+dotfiles_deps: []

@@ -1,0 +1,212 @@
+---
+arch_root: /mnt
+
+# These are aliases that define file names with group vars for a host.
+# The name is obtained from `ansible_product_name` fact and matched to
+# corresponding file in `host_vars`.
+machine_aliases:
+  VirtualBox: vbox.yml
+  Gazelle Professional: gzp.yml
+  XPS 13 9350: xps.yml
+
+country: Sweden
+locales:
+  - en_US
+  - sv_SE
+
+user:
+  name: joel
+  group: users
+  uid: 1000
+  comment: Joel AA
+  groups:
+    - sys
+    - video
+    - wheel
+    - systemd-journal
+    - realtime
+    - plugdev
+    - input
+  shell: /bin/zsh
+  email: joak.dev@gmail.com
+
+extra_packages:
+  # Custom
+  - ansible
+  - archiso 
+  - aria2
+  - audacity
+  - blueberry
+  - bluez
+  - bluez-utils
+  - cinnamon
+  - cryptsetup
+  - diffutils
+  - docker
+  - docker-compose
+  - eclipse-java
+  - efibootmgr
+  - feh
+  - filezilla
+  - firefox
+  - firefix-developer-edition
+  - fzf
+  - gcc
+  - geany
+  - git-lfs
+  - gnome-calculator
+  - gnome-keyring
+  - gnome-terminal
+  - gnome-tweaks
+  - gparted
+  - gptfdisk
+  - gradle
+  - maven
+  - inkscape
+  - iproute2
+  - iputils
+  - iw
+  - jdk8
+  - libreoffice-fresh
+  - links
+  - lynx
+  - nano
+  - networkmanager
+  - networkmanager-openvpn
+  - nmap
+  - nvm
+  - parted
+  - pavucontrol
+  - pigz
+  - qbittorrent
+  - reflector
+  - rsync
+  - screen
+  - stow
+  - thunderbird
+  - tlp
+  - tmux
+  - tree
+  - ttf-hack
+  - vagrant
+  - vim
+  - virtualbox
+  - virtualbox-guest-iso
+  - vlc
+  - wget
+  - wpa_supplicant
+  - x264
+  - x265
+  - xf86-video-amdgpu
+  - xorg-server
+  - xorg-server-devel
+  - yarn
+  - zsh
+
+
+  #- calibre
+  - clang
+  #- evince
+  #- file-roller
+  - gimp
+  - git
+  - gvfs  # For mounting and Trash support in Thunar
+  - gvim
+  - hardinfo
+  - hasktags
+  - keepassxc
+  - neovim
+  - python-neovim
+  - ripgrep
+  #- thunar
+  #- thunar-archive-plugin
+  - tldr
+  - tmux
+  - tmuxp
+
+  # Media
+  - smplayer
+  - goldendict
+  - chromium
+
+  # Console
+  - terminator
+  - termite
+  - bash-completion
+  - mlocate
+  - htop
+  - ptop
+  - hub
+  - httpie
+
+  # Filesystems
+  - dosfstools
+  - ntfs-3g
+  - exfat-utils
+
+  # Archives
+  - zip
+  - unzip
+  - p7zip
+  - unrar
+  - bzip2
+
+  # Fonts
+  - ttf-freefont
+  - ttf-arphic-uming
+  - ttf-indic-otf
+  - terminus-font
+
+  # Spell check.
+  - aspell
+  - aspell-en
+  - aspell-uk
+  - hunspell
+  - hunspell-en_US
+  - muparser  # optional for Albert calculator extension
+
+extra_aur_packages:
+  - albert
+  - autorandr
+  - chromium-widevine  # Google's Content Decryption Module plugin.
+  - dropbox
+  - flameshot
+  - gocode-git
+  - kalu
+  - mimeo
+  - neovim-gtk-git
+  - pasystray-gtk3-git
+  - tectonic
+  - thunar-dropbox-git
+  - ttf-emojione
+  - ttf-material-design-icons-git
+  - xkb-switch
+  - unclutter-xfixes-git
+  - multiload-ng-systray-gtk3
+  # Custom ones
+  - chromedriver
+  - deepin-screen-recorder
+  - deepin-screenshot
+  - discord
+  - figma-linux-bin
+  - franz-bin
+  - ghetto-skype-git
+  - google-chrome
+  - green-recorder
+  - intellij-idea-ultimate-edition
+  - libdvdcss
+  - libinput-gestures
+  - spotify
+  - steam
+  - zoom
+
+dotfiles:
+  repo: "https://github.com/joelbits/dotfiles"
+  install_cmd: "stow -d ${HOME}/dotfiles -S aws bash bin conky git keepassxc terminator xorg zsh"
+  deps:
+    - conky
+    - stow
+    - xsel
+    - python-jedi
+    - hasktags
+    - ctags
