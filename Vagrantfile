@@ -1,12 +1,18 @@
 Vagrant.configure("2") do |config|
-  config.vm.provider "virtualbox"
-    config.vm.box = "ubuntu/bionic64" 
-  
-    config.vm.define "server1" do |server1|
-      # restrict scope of ansible provisioner to server1 by invoking on its class method off the constructor
-      server1.vm.provision :ansible do |ansible|
-        ansible.become = true
-        ansible.playbook = "ansible-arch-linux-playbook/install.yml"
-      end
-    end
+  config.vm.box = "archlinux/archlinux"  
+  config.vm.network :private_network, ip: "192.168.50.2"
+
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+    v.cpus = 2
+  end
+  # Configure Ansible provisionner
+  config.vm.provision :ansible do |ansible|
+     ansible.host_key_checking = false
+     ansible.inventory_path = "vagrant.inventory"
+     ansible.extra_vars = { ansible_python_interpreter: "/usr/bin/python2" }
+     ansible.verbose = "extra"
+
+     ansible.playbook = "ansible/install.yml"
+  end
 end

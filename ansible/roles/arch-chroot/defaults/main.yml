@@ -30,6 +30,9 @@ packages:
   - wpa_supplicant
   - links
   - lynx
+  - git
+  - terminus-font
+
 
 # File name for encryption key used by dmcrypt to encrypt non-root
 # partitions. The key is stored on encrypted root partition which is unlocked

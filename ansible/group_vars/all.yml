@@ -8,6 +8,7 @@ machine_aliases:
   VirtualBox: vbox.yml
   Gazelle Professional: gzp.yml
   XPS 13 9350: xps.yml
+  20MUCTO1WW: vbox.yml
 
 country: Sweden
 locales:
