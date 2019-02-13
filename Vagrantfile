@@ -12,7 +12,6 @@ Vagrant.configure("2") do |config|
      ansible.inventory_path = "vagrant.inventory"
      ansible.extra_vars = { ansible_python_interpreter: "/usr/bin/python2" }
      ansible.verbose = "extra"
-
      ansible.playbook = "ansible/install.yml"
   end
 end

@@ -18,7 +18,7 @@ luks_key_name: luks.key
 #   - mountpoint
 
 drive:
-  device: /dev/sda
+  device: /dev/nvme0n1
   table: gpt
   partitions:
     # NOTE: Partitions must be defined in order of mounting.
