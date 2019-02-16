@@ -9,6 +9,7 @@ machine_aliases:
   Gazelle Professional: gzp.yml
   XPS 13 9350: xps.yml
   20MUCTO1WW: vbox.yml
+  HP Spectre x360 Convertible 15-bl0XX: x360.yml
 
 country: Sweden
 locales:
