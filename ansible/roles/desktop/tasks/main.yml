@@ -1,7 +1,7 @@
 ---
 
 - import_tasks: xorg.yml
-- import_tasks: lxdm.yml
+#- import_tasks: lxdm.yml
 - import_tasks: themes.yml
 - import_tasks: media.yml
 - import_tasks: networkmanager.yml

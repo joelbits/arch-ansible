@@ -34,3 +34,9 @@
   copy:
     src: dunstrc
     dest: "/etc/xdg/dunst/dunstrc"
+
+- name: add user to input group
+  user: name={{ user.name }} groups=input append=yes
+
+- name: auto login at tty1
+  copy: src=getty@tty1.service.d/override.conf dest=/etc/systemd/system/getty@tty1.service.d/override.conf
