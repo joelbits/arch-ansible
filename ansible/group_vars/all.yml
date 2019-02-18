@@ -69,7 +69,7 @@ extra_packages:
   - iproute2
   - iputils
   - iw
-  - jdk8
+  #- jdk8
   - libreoffice-fresh
   - links
   - lynx
