@@ -162,8 +162,8 @@ extra_packages:
   - aspell
   - aspell-en
   - aspell-uk
-  - hunspell
-  - hunspell-en_US
+  #- hunspell
+  #- hunspell-en_US
   #- muparser  # optional for Albert calculator extension
 
 extra_aur_packages:
