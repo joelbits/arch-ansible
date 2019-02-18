@@ -1,9 +1,12 @@
 hostname: xps
 
-host_extra_packages: []
+host_extra_packages:
+  - xf86-video-intel
+  - bumblebee
+  - mesa
+  
 
-host_extra_aur_packages:
-  - bcm4350-firmware
+host_extra_aur_packages: []
 
 drive:
   device: /dev/nvme0n1

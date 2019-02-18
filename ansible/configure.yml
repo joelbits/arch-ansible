@@ -19,7 +19,7 @@
     - import_role: {name: laptop}
     - import_role: {name: dotfiles}
 
-    - name: start LXDM
-      service:
-        name: lxdm
-        state: started
+    #- name: start LXDM
+    #  service:
+    #    name: lxdm
+    #    state: stopped

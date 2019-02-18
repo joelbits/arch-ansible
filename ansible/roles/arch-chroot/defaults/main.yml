@@ -32,6 +32,7 @@ packages:
   - lynx
   - git
   - terminus-font
+  - reflector
 
 
 # File name for encryption key used by dmcrypt to encrypt non-root

@@ -29,6 +29,7 @@ user:
     - realtime
     - plugdev
     - input
+    - bumblebee
   shell: /bin/zsh
   email: joak.dev@gmail.com
 
@@ -51,7 +52,7 @@ extra_packages:
   - feh
   - filezilla
   - firefox
-  - firefix-developer-edition
+  - firefox-developer-edition
   - fzf
   - gcc
   - geany
@@ -99,7 +100,6 @@ extra_packages:
   - wpa_supplicant
   - x264
   - x265
-  - xf86-video-amdgpu
   - xorg-server
   - xorg-server-devel
   - yarn
@@ -113,7 +113,6 @@ extra_packages:
   - gimp
   - git
   - gvfs  # For mounting and Trash support in Thunar
-  - gvim
   - hardinfo
   - hasktags
   - keepassxc
@@ -129,7 +128,7 @@ extra_packages:
   # Media
   - smplayer
   - goldendict
-  - chromium
+  #- chromium
 
   # Console
   - terminator
@@ -137,7 +136,7 @@ extra_packages:
   - bash-completion
   - mlocate
   - htop
-  - ptop
+  #- ptop
   - hub
   - httpie
 
@@ -165,46 +164,46 @@ extra_packages:
   - aspell-uk
   - hunspell
   - hunspell-en_US
-  - muparser  # optional for Albert calculator extension
+  #- muparser  # optional for Albert calculator extension
 
 extra_aur_packages:
-  - albert
+  #- albert
   - autorandr
-  - chromium-widevine  # Google's Content Decryption Module plugin.
+  #- chromium-widevine  # Google's Content Decryption Module plugin.
   - dropbox
   - flameshot
   - gocode-git
   - kalu
-  - mimeo
+  #- mimeo
   - neovim-gtk-git
   - pasystray-gtk3-git
   - tectonic
-  - thunar-dropbox-git
+  #- thunar-dropbox-git
   - ttf-emojione
   - ttf-material-design-icons-git
   - xkb-switch
   - unclutter-xfixes-git
-  - multiload-ng-systray-gtk3
+  #- multiload-ng-systray-gtk3
   # Custom ones
   - chromedriver
   - deepin-screen-recorder
   - deepin-screenshot
-  - discord
+  #- discord
   - figma-linux-bin
   - franz-bin
   - ghetto-skype-git
   - google-chrome
-  - green-recorder
+  #- green-recorder
   - intellij-idea-ultimate-edition
-  - libdvdcss
+  #- libdvdcss
   - libinput-gestures
   - spotify
-  - steam
+  #- steam
   - zoom
 
 dotfiles:
   repo: "https://github.com/joelbits/dotfiles"
-  install_cmd: "stow -d ${HOME}/dotfiles -S aws bash bin conky git keepassxc terminator xorg zsh"
+  install_cmd: "stow -d ${HOME}/dotfiles -R aws bash bin conky git keepassxc terminator zsh"
   deps:
     - conky
     - stow
