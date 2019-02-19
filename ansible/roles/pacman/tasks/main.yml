@@ -11,6 +11,20 @@
     regexp: '^#?VerbosePkgLists$'
     line: VerbosePkgLists
 
+- name: 'configure pacman: enable multilib repo'
+  lineinfile:
+    path: /etc/pacman.conf
+    regexp: "^#\\[multilib\\]"
+    line: '[multilib]'
+    state: present
+
+- name: 'configure pacman: enable multilib repo'
+  lineinfile:
+    path: /etc/pacman.conf
+    regexp: '^#?Include = /etc/pacman.d/mirrorlist$'
+    line: Include = /etc/pacman.d/mirrorlist
+    state: present
+
 - name: refresh pacman cache and upgrade the system
   pacman: update_cache=yes upgrade=yes
 

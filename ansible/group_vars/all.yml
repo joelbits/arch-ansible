@@ -85,12 +85,14 @@ extra_packages:
   - reflector
   - rsync
   - screen
+  - steam
   - stow
   - thunderbird
   - tlp
   - tmux
   - tree
   - ttf-hack
+  - ttf-liberation
   - vagrant
   - vim
   - virtualbox
