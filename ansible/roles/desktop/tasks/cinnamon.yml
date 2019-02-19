@@ -28,9 +28,15 @@
   tags:
     - cinnamon_desklets
 
+- name: Copy cinnamon desklet settings from backup
+  copy:
+    src: cinnamon_configs/
+    dest: "/home/{{ user.name }}/.cinnamon/configs"
+  tags:
+    - cinnamon_desklets
+    
 - name: load cinnamon / gsettings from backup file with dconf
   become: no
   command: "dconf load /org/cinnamon/ < /home/{{ user.name }}/cinnamon_settings.config"
   tags:
     - cinnamon_desklets
-
