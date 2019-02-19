@@ -189,12 +189,13 @@ extra_aur_packages:
   - deepin-screen-recorder
   - deepin-screenshot
   #- discord
-  - figma-linux-bin
+  - figma-bin
   - franz-bin
   - ghetto-skype-git
   - google-chrome
   #- green-recorder
   - intellij-idea-ultimate-edition
+  - webstorm
   #- libdvdcss
   - libinput-gestures
   - spotify
