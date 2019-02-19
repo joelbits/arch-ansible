@@ -1,0 +1,36 @@
+---
+
+- name: install cinnamon desklets
+  unarchive:
+    src: "{{ item }}"
+    dest: "/home/{{ user.name }}/.local/share/cinnamon/desklets"
+    remote_src: yes
+  with_items:
+    - https://cinnamon-spices.linuxmint.com/files/desklets/battery@schorschii.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/bbcwx@oak-wood.co.uk.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/cpuload@kimse.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/diskspace@schorschii.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/googleCalendar@javahelps.com.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/netusage@30yavash.com.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/powerUsage@hosvir.com.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/quoteOfTheDay@tinnu.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/reddit-reader@orangeshark.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/temperature@swalladge.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/TimeAndDate@nightflame.zip
+    - https://cinnamon-spices.linuxmint.com/files/desklets/top@ryannerd.zip
+  tags:
+    - cinnamon_desklets
+
+- name: Copy cinnamon settings file into home dir
+  copy: 
+    src: cinnamon_settings.config
+    dest: "/home/{{ user.name }}/cinnamon_settings.config"
+  tags:
+    - cinnamon_desklets
+
+- name: load cinnamon / gsettings from backup file with dconf
+  become: no
+  command: "dconf load /org/cinnamon/ < /home/{{ user.name }}/cinnamon_settings.config"
+  tags:
+    - cinnamon_desklets
+
