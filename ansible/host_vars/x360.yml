@@ -4,6 +4,10 @@ host_extra_packages:
   - xf86-video-intel
   - bumblebee
   - mesa
+  - nvidia
+  - nvidia-settings
+  - lib32-virtualgl 
+  - lib32-nvidia-utils
   
 
 host_extra_aur_packages: []

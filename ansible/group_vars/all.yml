@@ -203,6 +203,19 @@ extra_aur_packages:
   - spotify
   #- steam
   - zoom
+  #- libc++
+  #- discord
+  #- freecad
+  - android-studio
+  #- tor-browser
+  - mongodb-bin
+  - downgrade
+  - zotero
+  - android-sdk-platform-tools 
+  - ttf-symbola
+  - flutter
+  - notable-bin
+  - gitkraken
 
 dotfiles:
   repo: "https://github.com/joelbits/dotfiles"

@@ -39,7 +39,7 @@
     backup: 'yes'
 
 - name: enable redshift service
-  command: systemctl --user enable redshift.service
+  command: systemctl --user disable redshift.service
   become_user: "{{ user.name }}"
 
 - name: install MIME application associations
