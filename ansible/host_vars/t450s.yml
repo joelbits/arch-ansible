@@ -19,13 +19,13 @@ drive:
 
     - name: root
       start: 512MiB
-      end: 70%
+      end: 137GiB
       filesystem: ext4
       mountpoint: /
       encrypt: true
 
     - name: windows
-      start: 70%
+      start: 137GiB
       end: 100%
       filesystem: vfat
       mountpoint: /mnt/windows
