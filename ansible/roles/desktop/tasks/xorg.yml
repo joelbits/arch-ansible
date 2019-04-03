@@ -38,8 +38,8 @@
 - name: add user to input group
   user: name={{ user.name }} groups=input append=yes
 
-- name: auto login at tty1
-  copy: src=getty@tty1.service.d/override.conf dest=/etc/systemd/system/getty@tty1.service.d/override.conf
+#- name: auto login at tty1
+#  copy: src=getty@tty1.service.d/override.conf dest=/etc/systemd/system/getty@tty1.service.d/override.conf
 
-- name: enable bumblebee service
-  service: name=bumblebeed.service enabled=yes state=started
+#- name: enable bumblebee service
+#  service: name=bumblebeed.service enabled=yes state=started

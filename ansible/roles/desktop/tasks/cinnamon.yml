@@ -1,5 +1,10 @@
 ---
 
+- name: cinnamon desklets directory
+  file:
+    path: "/home/{{ user.name }}/.local/share/cinnamon/desklets"
+    state: directory
+
 - name: install cinnamon desklets
   unarchive:
     src: "{{ item }}"
@@ -28,6 +33,11 @@
   tags:
     - cinnamon_desklets
 
+- name: cinnamon desklets settings directory
+  file:
+    path: "/home/{{ user.name }}/.cinnamon/configs"
+    state: directory
+
 - name: Copy cinnamon desklet settings from backup
   copy:
     src: cinnamon_configs/
@@ -35,8 +45,8 @@
   tags:
     - cinnamon_desklets
     
-- name: load cinnamon / gsettings from backup file with dconf
-  become: no
-  command: "dconf load /org/cinnamon/ < /home/{{ user.name }}/cinnamon_settings.config"
-  tags:
-    - cinnamon_desklets
+#- name: load cinnamon / gsettings from backup file with dconf
+#  become: no
+#  command: "dconf load /org/cinnamon/ < /home/{{ user.name }}/cinnamon_settings.config"
+#  tags:
+#    - cinnamon_desklets

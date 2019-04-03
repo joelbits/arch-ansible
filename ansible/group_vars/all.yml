@@ -10,6 +10,7 @@ machine_aliases:
   XPS 13 9350: xps.yml
   20MUCTO1WW: vbox.yml
   HP Spectre x360 Convertible 15-bl0XX: x360.yml
+  20BWS0TY00: t450s.yml
 
 country: Sweden
 locales:
@@ -26,10 +27,7 @@ user:
     - video
     - wheel
     - systemd-journal
-    - realtime
-    - plugdev
     - input
-    - bumblebee
   shell: /bin/zsh
   email: joak.dev@gmail.com
 
@@ -77,7 +75,6 @@ extra_packages:
   - networkmanager
   - networkmanager-openvpn
   - nmap
-  - nvm
   - parted
   - pavucontrol
   - pigz
@@ -89,7 +86,6 @@ extra_packages:
   - stow
   - thunderbird
   - tlp
-  - tmux
   - tree
   - ttf-hack
   - ttf-liberation
@@ -106,6 +102,7 @@ extra_packages:
   - xorg-server-devel
   - yarn
   - zsh
+  - xournal
 
 
   #- calibre
@@ -172,7 +169,7 @@ extra_aur_packages:
   #- albert
   - autorandr
   #- chromium-widevine  # Google's Content Decryption Module plugin.
-  - dropbox
+  #- dropbox
   - flameshot
   - gocode-git
   - kalu
@@ -216,6 +213,8 @@ extra_aur_packages:
   - flutter
   - notable-bin
   - gitkraken
+  - nvm
+  - tmux
 
 dotfiles:
   repo: "https://github.com/joelbits/dotfiles"

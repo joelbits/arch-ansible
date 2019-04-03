@@ -23,7 +23,7 @@
     name:
       - ttf-hack
       - ttf-dejavu
-      - ttf-ubraille
+      #- ttf-ubraille
       # Fonts to use asian characters
       - ttf-freefont
       - ttf-arphic-uming
@@ -39,6 +39,11 @@
   copy:
     src: gtk-2.0/gtkrc
     dest: /etc/gtk-2.0/gtkrc
+
+- name: GTK 3 config directory
+  file:
+    path: /etc/gtk-3.0
+    state: directory
 
 - name: configure GTK 3
   copy: src=gtk-3.0/settings.ini dest=/etc/gtk-3.0/settings.ini

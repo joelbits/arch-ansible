@@ -1,0 +1,32 @@
+hostname: xps
+
+host_extra_packages:
+  - xf86-video-intel
+  - mesa
+
+host_extra_aur_packages: []
+
+drive:
+  device: /dev/sda
+  table: gpt
+  partitions:
+
+    - name: bios_grub
+      start: 1MiB
+      end: 512MiB
+      flags: [bios_grub]
+      encrypt: false
+
+    - name: root
+      start: 512MiB
+      end: 70%
+      filesystem: ext4
+      mountpoint: /
+      encrypt: true
+
+    - name: windows
+      start: 70%
+      end: 100%
+      filesystem: vfat
+      mountpoint: /mnt/windows
+      encrypt: false

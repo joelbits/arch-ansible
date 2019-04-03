@@ -14,7 +14,7 @@
 - name: 'configure pacman: enable multilib repo'
   lineinfile:
     path: /etc/pacman.conf
-    regexp: "^#\\[multilib\\]"
+    regexp: "^\\[multilib\\]"
     line: '[multilib]'
     state: present
 
